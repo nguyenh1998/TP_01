@@ -1,0 +1,150 @@
+header {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: .5s ease-in-out;
+  
+    .btn-open-menu {
+      width: 25px;
+      height: 18px;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      cursor: pointer;
+  
+      &:after {
+        background-color: #000;
+        content: '';
+        display: block;
+        width: 50%;
+        height: 2px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transition: .5s ease-in-out;
+      }
+  
+      .hamburguer {
+        position: relative;
+        display: block;
+        background: #000;
+        width: 100%;
+        height: 2px;
+        top: 5px;
+        left: 0;
+        transition: .5s ease-in-out;
+  
+        &:before, &:after {
+          background: #000;
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          transition: .5s ease-in-out;
+        }
+  
+        &:before {
+          top: -5px;
+        }
+  
+        &:after {
+          bottom: -5px;
+        }
+      }
+    }
+  
+    .header-content {
+      width: 85%;
+      height: 100%;
+      background-color: #EEEEEE;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: -150%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      align-content: center;
+      transition: .1s ease-in-out;
+  
+      .btn-close-menu {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        align-content: center;
+  
+        &:before, &:after {
+          background: #000;
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          transition: .5s ease-in-out;
+        }
+  
+        &:before {
+          transform: rotate(45deg);
+          top: 11px;
+        }
+  
+        &:after {
+          transform: rotate(-45deg);
+          bottom: 12px;
+        }
+      }
+  
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+  
+        a {
+          color: #000;
+          letter-spacing: .5px;
+          line-height: 35px;
+          text-decoration: none;
+          transition: .5s;
+          
+          &:hover {
+            color: rgba(0, 0, 0, 0.5);
+            transition: .5s;
+          }
+        }
+      }
+    }
+  
+    &.open {
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.3);
+      transition: .3s ease-in-out;
+  
+      .btn-open-menu {
+        opacity: 0;
+        transition: .3s ease-in-out;
+      }
+  
+      .header-content {
+        left: 0;
+        transition: .7s ease-in-out;
+      }
+    }
+  }

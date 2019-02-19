@@ -2,6 +2,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Aclonica");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -50,5 +52,209 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+header .btn-open-menu {
+  width: 25px;
+  height: 18px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+header .btn-open-menu:after {
+  background-color: #000;
+  content: '';
+  display: block;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+header .btn-open-menu .hamburguer {
+  position: relative;
+  display: block;
+  background: #000;
+  width: 100%;
+  height: 2px;
+  top: 5px;
+  left: 0;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+header .btn-open-menu .hamburguer:before, header .btn-open-menu .hamburguer:after {
+  background: #000;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+header .btn-open-menu .hamburguer:before {
+  top: -5px;
+}
+
+header .btn-open-menu .hamburguer:after {
+  bottom: -5px;
+}
+
+header .header-content {
+  width: 85%;
+  height: 100%;
+  background-color: #EEEEEE;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: -150%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+}
+
+header .header-content .btn-close-menu {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+header .header-content .btn-close-menu:before, header .header-content .btn-close-menu:after {
+  background: #000;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+header .header-content .btn-close-menu:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 11px;
+}
+
+header .header-content .btn-close-menu:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 12px;
+}
+
+header .header-content nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+header .header-content nav a {
+  color: #000;
+  letter-spacing: .5px;
+  line-height: 35px;
+  text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header .header-content nav a:hover {
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header.open {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+header.open .btn-open-menu {
+  opacity: 0;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+header.open .header-content {
+  left: 0;
+  -webkit-transition: .7s ease-in-out;
+  transition: .7s ease-in-out;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
