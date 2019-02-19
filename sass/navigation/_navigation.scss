@@ -1,3 +1,4 @@
+// Section du header 
 header {
     width: 100%;
     height: 100%;
@@ -7,7 +8,8 @@ header {
     left: 0;
     z-index: 10;
     transition: .5s ease-in-out;
-  
+    
+    // Emplacement du bouton menu
     .btn-open-menu {
       width: 25px;
       height: 18px;
@@ -27,7 +29,8 @@ header {
         bottom: 0;
         transition: .5s ease-in-out;
       }
-  
+      
+      //Style pour le bouton burger 
       .hamburguer {
         position: relative;
         display: block;
@@ -57,7 +60,8 @@ header {
         }
       }
     }
-  
+    
+    //Contenu du menu (position et style)
     .header-content {
       width: 85%;
       height: 100%;
@@ -73,7 +77,8 @@ header {
       flex-direction: column;
       align-content: center;
       transition: .1s ease-in-out;
-  
+        
+      //Position du bouton de fermeture
       .btn-close-menu {
         width: 25px;
         height: 25px;
@@ -87,7 +92,9 @@ header {
         justify-content: center;
         flex-direction: row;
         align-content: center;
-  
+        
+
+        //Style pour le bouton de fermeture 
         &:before, &:after {
           background: #000;
           content: '';
@@ -109,6 +116,7 @@ header {
         }
       }
   
+      //Style pour la navigation 
       nav {
         display: flex;
         flex-wrap: wrap;
@@ -116,7 +124,8 @@ header {
         justify-content: center;
         flex-direction: column;
         align-content: center;
-  
+        
+        //Style pour les boutons menu
         a {
           color: #000;
           letter-spacing: .5px;
@@ -131,17 +140,20 @@ header {
         }
       }
     }
-  
+    
+    //Faire deplacer le menu de gauche a droite de la page
     &.open {
       height: 100vh;
       background-color: rgba(0, 0, 0, 0.3);
       transition: .3s ease-in-out;
-  
+        
+      //Faire disparaitre le bouton burger
       .btn-open-menu {
         opacity: 0;
         transition: .3s ease-in-out;
       }
-  
+      
+      //Deplecer le menu
       .header-content {
         left: 0;
         transition: .7s ease-in-out;
