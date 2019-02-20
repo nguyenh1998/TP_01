@@ -1,4 +1,4 @@
-$break-small: 320px;
+$break-small: 400px;
 $break-large: 1200px;
 
 html, body {
@@ -8,18 +8,27 @@ html, body {
 }
 
 img {
-    max-width: 230%;
-    max-height: 100%;
+    filter: grayscale(100%);
+    transition: .3s ease-in-out;
 
-    @media screen and (max-width: $break-small){
-        max-width: 150%;
+    max-width: 200%;
+    max-height: 100%;
+    margin-right: 150px;
+
+    @media only screen and (min-width: $break-small){
+        max-width: 400%;
+        max-height: 150%;
     }
 
-    @media screen and (max-width: $break-large){
-        max-width: 350%;
+    @media only screen and (min-width: $break-large){
+        max-width: 230%;
+        max-height: 100%;
     }
 
 }
 
+.panel:hover img{
+    filter: grayscale(0%);
+}
 
 
