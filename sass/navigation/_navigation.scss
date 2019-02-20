@@ -14,8 +14,8 @@ header {
       width: 25px;
       height: 18px;
       position: absolute;
-      top: 15px;
-      right: 15px;
+      top: 20px;
+      right: 20px;
       cursor: pointer;
   
       &:after {
@@ -27,9 +27,9 @@ header {
         position: absolute;
         right: 0;
         bottom: 0;
-        transition: .5s ease-in-out;
+        transition: all .5s ease-in-out;
       }
-      
+
       //Style pour le bouton burger 
       .hamburguer {
         position: relative;
@@ -132,6 +132,7 @@ header {
           line-height: 35px;
           text-decoration: none;
           transition: .5s;
+          font-size: 1.5em;
           
           &:hover {
             color: rgba(0, 0, 0, 0.5);
