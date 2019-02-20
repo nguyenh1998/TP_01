@@ -79,7 +79,6 @@ table {
       -ms-flex: 0 1 100%;
           flex: 0 1 100%;
   grid-column: 1 / -1;
-  height: 100px;
 }
 
 .wrapper > * {
@@ -88,6 +87,7 @@ table {
   padding: 1px;
   font-size: 150%;
   margin-bottom: 5px;
+  overflow: hidden;
 }
 
 header {
@@ -257,11 +257,11 @@ header .header-content nav {
 header .header-content nav a {
   color: #000;
   letter-spacing: .5px;
-  line-height: 35px;
+  line-height: 70px;
   text-decoration: none;
   -webkit-transition: .5s;
   transition: .5s;
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 
 header .header-content nav a:hover {
@@ -293,5 +293,9 @@ html, body {
   width: 100%;
   height: 100%;
   font-family: 'Roboto', sans-serif;
+}
+
+img {
+  max-width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

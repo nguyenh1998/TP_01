@@ -3,8 +3,7 @@
     display: grid;
     margin: 58px auto;
     grid-template-columns: repeat(auto-fill, minmax(385px, 1fr));
-    grid-auto-rows: minmax(385px, auto);
-
+    grid-auto-rows: minmax(385px, auto);    
 }
 
 .panel {
@@ -18,7 +17,6 @@
     margin-right: 5px;
     flex: 0 1 100%;
     grid-column: 1 / -1;
-    height: 100px;
 }
 
 .wrapper > * {
@@ -27,4 +25,5 @@
     padding: 1px;
     font-size: 150%;
     margin-bottom: 5px;
+    overflow: hidden;
 }
