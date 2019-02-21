@@ -100,6 +100,12 @@ header {
   z-index: 0;
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
+  font-size: 1.2em;
+}
+
+header h1 {
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 header .btn-open-menu {
@@ -288,6 +294,13 @@ header.open .header-content {
   left: 0;
   -webkit-transition: .7s ease-in-out;
   transition: .7s ease-in-out;
+}
+
+@font-face {
+  font-family: "axis";
+  src: url(../../fonts/axis.otf) format("truetype");
+  font-weight: 100;
+  font-style: bold;
 }
 
 html, body {

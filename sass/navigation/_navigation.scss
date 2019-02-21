@@ -8,7 +8,12 @@ header {
     left: 0;
     z-index: 0;
     transition: .5s ease-in-out;
+    font-size: 1.2em;
 
+    h1 {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
     
     // Emplacement du bouton menu
     .btn-open-menu {
