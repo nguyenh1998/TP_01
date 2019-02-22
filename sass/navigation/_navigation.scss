@@ -18,6 +18,10 @@ header {
       margin-left: 20px;
       font-size: 1.4em;
     }
+
+    h1:hover {
+      cursor: pointer;
+    }
     
     // Emplacement du bouton menu
     .btn-open-menu {

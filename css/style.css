@@ -163,6 +163,10 @@ header h1 {
   font-size: 1.4em;
 }
 
+header h1:hover {
+  cursor: pointer;
+}
+
 header .btn-open-menu {
   width: 25px;
   height: 18px;
@@ -406,6 +410,11 @@ img {
   cursor: pointer;
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .animation-01 {
