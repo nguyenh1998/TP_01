@@ -1,5 +1,6 @@
 export class Devoilement {
-
+    
+    //Constructeur
     constructor(elementParent, fonction) {
         this.elmParent = elementParent
         this.afficherSite()
