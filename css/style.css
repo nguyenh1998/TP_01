@@ -67,6 +67,11 @@ table {
   opacity: 0;
 }
 
+.wrapper.fadeInGallery {
+  -webkit-animation: fadeIn 1s ease-out forwards;
+          animation: fadeIn 1s ease-out forwards;
+}
+
 .panel {
   margin-left: 2.5px;
   margin-right: 2.5px;
@@ -100,7 +105,7 @@ table {
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1100px) {
   .footer {
     line-height: 40px;
     font-size: 1em;
@@ -119,6 +124,24 @@ table {
   font-size: 150%;
   margin-bottom: 5px;
   overflow: hidden;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 header {
@@ -147,6 +170,18 @@ header .btn-open-menu {
   top: 20px;
   right: 20px;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 420px) {
+  header .btn-open-menu {
+    right: 20px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  header .btn-open-menu {
+    right: 45px;
+  }
 }
 
 header .btn-open-menu:after {

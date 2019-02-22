@@ -7,6 +7,7 @@ let elmConteneurAnim1 = document.querySelector('.animation-01')
 let elmConteneurAnim2 = document.querySelector('.animation-02')
 let loading = new Introduction(elmConteneurAnim1, devoilementPage)
 
+//Lancement du deuxième animation 
 function devoilementPage() {
     let pageDevoilement = new Devoilement(elmConteneurAnim2, finAnim)
 }
