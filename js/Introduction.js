@@ -1,12 +1,16 @@
+import {
+    Util
+} from './Util.js'
+
 export class Introduction {
 
-    constructor(elementParent) {
+    constructor(elementParent, fonction) {
         this.elmParent = elementParent
         this.integrerEcranLoad()
+        this.fonction = fonction
     }//Fin du constructor
 
     integrerEcranLoad() {
-        console.log('AAAAAAA')
         //Création du balise conteneur pour les bullets (loading)
         let elmConteneur = this.creerElement(this.elmParent, 'div', 'loading')
         
@@ -16,6 +20,8 @@ export class Introduction {
         let elmBullet3 = this.creerElement(elmConteneur, 'div', 'bullet')
         let elmBullet4 = this.creerElement(elmConteneur, 'div', 'bullet')
 
+        let dernierBullet = document.getElementsByClassName('bullet')[3]
+        dernierBullet.addEventListener('animationend', this.passerVersAnimationSuivante.bind(this))
     }//Fin de la fonction 
 
     //Fonction pour créer des balises avec style CSS
@@ -31,7 +37,8 @@ export class Introduction {
         return monElm
     }//Fin de la fonction 
 
-    // terminerIntro(evt) {
-
-    // }
+    passerVersAnimationSuivante(evt) {
+        Util.detruireTousLesNoeud(this.elmParent, this.elmParent)
+        this.fonction()
+    }
 }//Fin de la classe
