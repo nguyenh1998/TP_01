@@ -114,12 +114,12 @@ table {
 }
 
 .footer span {
-  color: white;
+  color: black;
 }
 
 .wrapper > * {
-  background-color: #3b3b3b;
-  color: lightgray;
+  background-color: transparent;
+  color: #919191;
   padding: 1px;
   font-size: 150%;
   margin-bottom: 5px;

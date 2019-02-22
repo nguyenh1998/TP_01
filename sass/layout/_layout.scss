@@ -52,13 +52,13 @@ $break-large: 1100px;
    
     
     span {
-        color: white;
+        color: rgb(0, 0, 0);
     }
 }
 
 .wrapper > * {
-    background-color:#3b3b3b;
-    color: rgb(211, 211, 211);
+    background-color: transparent;
+    color: rgb(145, 145, 145);
     padding: 1px;
     font-size: 150%;
     margin-bottom: 5px;
